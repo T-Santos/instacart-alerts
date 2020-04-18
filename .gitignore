@@ -1,0 +1,10 @@
+
+# Anything in the vscode temp dir
+.vscode
+
+# local setup
+.env
+config.yaml
+
+# avoid egg noise
+instacart_alerts.egg-info/

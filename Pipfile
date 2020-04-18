@@ -1,0 +1,21 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+ipython = "*"
+ipdb = "*"
+
+[packages]
+twilio = "*"
+yagmail = "*"
+requests = "*"
+click = "*"
+pyyaml = "*"
+
+[requires]
+python_version = "3.7"
+
+[scripts]
+monitor = "monitor --file config.yaml"
