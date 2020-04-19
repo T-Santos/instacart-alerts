@@ -29,9 +29,19 @@ geolocations:
         phone: <Text To>
 ```
 
-## Run with the following
+## Run locally with pipenv with the following
 
-`monitor --file config.py`
+`pipenv run monitor`
+
+
+## Run with docker or docker-compose
+
+```sh
+cd instacart-alerts
+cd docker
+docker-compose build instacart-alerts
+docker-compose run --rm instacart-alerts
+```
 
 
 ## Environment Variables for Sending Notifications

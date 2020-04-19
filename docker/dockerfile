@@ -1,0 +1,17 @@
+FROM python:3
+
+RUN pip install pipenv
+
+ENV INSTALL_LOCATION /instacart-alerts
+
+ENV PYTHONPATH "${PYTHONPATH}:${INSTALL_LOCATION}"
+
+WORKDIR $INSTALL_LOCATION
+
+COPY Pipfile.lock .
+COPY Pipfile .
+COPY instacart_alerts/ instacart_alerts
+
+RUN pipenv install --deploy --ignore-pipfile
+
+CMD [ "pipenv", "run", "monitor" ]
