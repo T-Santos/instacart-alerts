@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+  instacart-alerts:
+    image: 1tsantos7/instacart-alerts:latest
+    build:
+      context: ../
+      dockerfile: docker/dockerfile
+
+    env_file:
+      - ../.env
+    volumes:
+      - ../config.yaml:/instacart-alerts/config.yaml:ro

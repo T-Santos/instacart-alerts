@@ -18,4 +18,4 @@ pyyaml = "*"
 python_version = "3.7"
 
 [scripts]
-monitor = "monitor --file config.yaml"
+monitor = "python instacart_alerts/monitor.py --file config.yaml"
